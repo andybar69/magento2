@@ -1,0 +1,24 @@
+<div class="choice field" xmlns="http://www.w3.org/1999/html">
+    <input type="checkbox"
+           class="checkbox custom-comment-checkbox"
+           data-bind="
+           checked: value,
+           mageInit: {'Barabash_Checkout/js/custom-checkbox':{}},
+           attr: {
+                id: uid,
+                disabled: disabled,
+                name: inputName,
+                'aria-describedby': getDescriptionId(),
+                'aria-required': required,
+                'aria-invalid': error() ? true : 'false'
+                },
+           hasFocus: focused">
+
+    <label class="label" data-bind="checked: value, attr: { for: uid }">
+        <span data-bind="text: description || label"></span>
+    </label>
+
+    <!-- ko if: notice -->
+    <div class="field-note" data-bind="attr: {id: noticeId}"><span data-bind="text: notice"></span></div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "Barabash/Checkout",
+  "autoload": {
+    "psr-4": { "Barabash\\Checkout\\": "" },
+    "files": [ "registration.php" ]
+  }
+}
